@@ -1,0 +1,31 @@
+Pitch controller for turbine "WindPACT 5.0 MW" (J. Rinker, 15-Aug-16)
+   3        CntrlRgn - Control region {2 = power control, 3 = speed control}
+  11        NCSNT    - Number of constants used in controls
+  -1.0      CNST(1)  - Gain on TF 1
+  11.191    CNST(2)  - Rotor speed set point, RPM
+   0.3      CNST(3)  - Integrator anti-windup gain
+   2.6      CNST(4)  - Minimum pitch angle, deg
+  90.0      CNST(5)  - Maximum pitch angle, deg
+  0.025     CNST(6)  - Time interval for pitch control, sec ( >= DT )
+   0.0454   CNST(7)  - Pitch angle at start of gain scheduling, (must be > 0) rad
+   0.5236   CNST(8)  - Pitch angle at end of gain scheduling (GSPit2>GSPit1), rad
+   0.213    CNST(9)  - Power law gain sched. coefficient
+  -0.500    CNST(10) - Power law gain sched. exponent
+   0        CNST(11) - Write pitcntrl.plt file?  0=no, 1=yes
+
+   1        Order of tf #1 (highest power of s), input=Rotor speed (RPM), output=Integral Pitch demand (deg)
+   2.220    0.000      Numerator coefficients   (Order+1 values, ascending powers of s)
+   0.000    1.000      Denominator coefficients (Order+1 values, ascending powers of s)
+
+   1        Order of tf #2 (highest power of s), input=Rotor speed (RPM), output=PD Pitch demand (deg)
+   5.140    0.080    Numerator coefficients   (Order+1 values, ascending powers of s)
+   1.000    0.020    Denominator coefficients (Order+1 values, ascending powers of s)
+
+   0        Order of tf #3, input=Tower accel, output=pitch (deg) (Use 0 to not include tower feedback cntrl)
+   9.640    1.400    Numerator coefficients   (Order+1 values, ascending powers of s)
+   0.358    1.000    Denominator coefficients (Order+1 values, ascending powers of s)
+
+   2        Order of tf #4, input=Pitch demand(deg), output=pitch (deg) (Use 0 for ADAMS to not include actuator)
+  21.973    0.000    0.000    Numerator coefficients   (Order+1 values, ascending powers of s)
+  21.973    7.500    1.000    Denominator coefficients (Order+1 values, ascending powers of s)
+

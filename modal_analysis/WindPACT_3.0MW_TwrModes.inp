@@ -1,0 +1,27 @@
+False     Blade Switch:  True = Blade, False = Tower
+   0.0    Steady state angular velocity of rotor (rpm)  [Ignored for towers]
+   0.0    Pitch angle for blades (degrees)  [Ignored for towers]
+ 116.731  Total beam length (m)
+   0.0    Rigid beam length (m)
+194268.37   End mass (kg)
+   5      Number of modes shapes or coefficients
+   2      Order of first coefficient
+  10      Number of input stations for distributed parameters
+   1.0    Factor to adjust mass
+   1.0    Factor to adjust tower stiffness
+   1.0    Factor to adjust in-plane stiffness  [Ignored for towers]
+0.000   5176.36  1.05e+12
+0.111   4572.93  8.20e+11
+0.222   4006.87  6.30e+11
+0.333   3478.21  4.75e+11
+0.444   2986.92  3.51e+11
+0.556   2533.03  2.53e+11
+0.667   2116.51  1.77e+11
+0.778   1737.38  1.19e+11
+0.889   1395.64  7.72e+10
+1.000   1091.28  4.73e+10
+
+For the lines of distributed parameters, the first column is the fractional
+distance along the flexible portion of the tower.  It must go from 0 to 1.
+The second column is the mass/length in kg/m, and the third column is the
+stiffness in N m^2.
