@@ -1,0 +1,39 @@
+FAST v8.09.* AeroDyn file for turbine "WindPACT 5.0 MW" (J. Rinker, 15-Aug-16)
+SI                                     SysUnits - System of units for used for input and output [must be SI for FAST] (unquoted string)
+BEDDOES                                StallMod - Dynamic stall included [BEDDOES or STEADY] (unquoted string)
+NO_CM                                  UseCm    - Use aerodynamic pitching moment model? [USE_CM or NO_CM] (unquoted string)
+EQUIL                                  InfModel - Inflow model [DYNIN or EQUIL] (unquoted string)
+SWIRL                                  IndModel - Induction-factor model [NONE or WAKE or SWIRL] (unquoted string)
+   0.005                               AToler   - Induction-factor tolerance (convergence criteria) (-)
+PRANDtl                                TLModel  - Tip-loss model (EQUIL only) [PRANDtl, GTECH, or NONE] (unquoted string)
+PRANDtl                                HLModel  - Hub-loss model (EQUIL only) [PRANdtl or NONE] (unquoted string)
+"..\Wind\Kaimal_1224.wnd"				   WindFile - Name of file containing wind data (quoted string)
+ 154.5229                              HH       - Wind reference (hub) height [TowerHt+Twr2Shft+OverHang*SIN(ShftTilt)] (m)
+   0.0                                 TwrShad  - Tower-shadow velocity deficit (-)
+9999.9                                 ShadHWid - Tower-shadow half width (m)
+9999.9                                 T_Shad_Refpt - Tower-shadow reference point (m)
+   1.225                               AirDens  - Air density (kg/m^3)
+ 1.46390E-05                           KinVisc  - Kinematic air viscosity (m^2/sec)
+   0.005                               DTAero   - Time interval for aerodynamic calculations (sec)
+   4                                   NumFoil  - Number of airfoil files (-)
+"..\AeroData\cylinder.dat"    FoilNm   - Names of the airfoil files [NumFoil lines] (quoted strings)
+"..\AeroData\s818_2703.dat"
+"..\AeroData\s825_2103.dat"
+"..\AeroData\s826_1603.dat"
+  15                                   BldNodes - Number of blade nodes used for analysis (-)
+RNodes    AeroTwst  DRNodes  Chord  NFoil  PrnElm
+ 5.22667  11.10     4.05333  3.564  1      NOPRINT	
+ 9.28000  11.10     4.05333  4.150  2      NOPRINT	
+13.33333  11.10     4.05333  4.735  2      NOPRINT	
+17.38667  10.41     4.05333  5.016  2      NOPRINT	
+21.44000   8.38     4.05333  4.714  2      NOPRINT	
+25.49333   6.35     4.05333  4.411  2      NOPRINT	
+29.54667   4.33     4.05333  4.109  2      NOPRINT	
+33.60000   2.85     4.05333  3.806  3      NOPRINT	
+37.65333   2.22     4.05333  3.504  3      NOPRINT	
+41.70667   1.58     4.05333  3.201  3      NOPRINT	
+45.76000   0.95     4.05333  2.898  3      NOPRINT	
+49.81333   0.53     4.05333  2.609  3      NOPRINT	
+53.86667   0.38     4.05333  2.337  3      NOPRINT	
+57.92000   0.23     4.05333  2.065  4      NOPRINT	
+61.97333   0.08     4.05333  1.793  4      NOPRINT	
